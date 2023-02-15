@@ -260,6 +260,9 @@ export default {
     position: static;
     margin-top: 82px;
   }
+  .about__foot-item{
+    width: 45%;
+  }
   .about__foot-title {
     font-size: 26px;
   }
@@ -296,9 +299,6 @@ export default {
     margin-top: 50px;
     row-gap: 25px;
     column-gap: 20px;
-  }
-  .about__foot-item {
-    width: 150px;
   }
   .about__foot-title {
     font-size: 24px;

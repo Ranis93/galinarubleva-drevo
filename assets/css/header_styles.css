@@ -32,6 +32,11 @@ img{
 .show{
 	display: block;
 }
+.header{
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
 .header__hat{
 	margin-bottom: 31px;
 }
@@ -63,6 +68,9 @@ img{
 }
 .header__burger{
 	display: none;
+	position: absolute;
+	top: 23px;
+	right: 20px;
 }
 .header__excort{
 	margin-top: 15px;
@@ -124,7 +132,7 @@ img{
 }
 .header__nav{
 	background-color: #673800;
-	padding: 23px 0;
+	padding: 21px 0 18px 0;
 }
 .header__list{
 	display: flex;
@@ -351,6 +359,10 @@ color: #673800;
 	}
 }
 @media (max-width: 480px) {
+	.header__inner{
+		justify-content: flex-start;
+		column-gap: 20px;
+	}
 	.header__contacts-second, .header__nav{
 		display: none
 	}
@@ -386,7 +398,7 @@ color: #673800;
 		line-height: 14px;
 	}
 	.header__burger{
-		margin-top: 23px;
+		margin-top: -131px;
 		display: block;
 		width: 50px;
 		height: 35px;
@@ -421,8 +433,8 @@ color: #673800;
 		margin-top: 8px;
 	}
 	.header__burger{
+		margin-top: -141px;
 		width: 37px;
 		height: 26px;
-		margin-top: 20px;
 	}
 }

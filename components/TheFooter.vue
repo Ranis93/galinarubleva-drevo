@@ -125,7 +125,7 @@
             </li>
             <li>
               <div class="footer__link">
-                Тел: +7 (347) 224-28-99
+                <a href="tel:+73472242899">Тел: +7 (347) 224-28-99</a>
               </div>
             </li>
             <li>
@@ -214,7 +214,7 @@ export default {
 .footer__links > li {
   padding-bottom: 10px;
 }
-.footer__link {
+.footer__link, .footer__link>a {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -287,7 +287,7 @@ export default {
     font-size: 18px;
     line-height: 25px;
   }
-  .footer__link {
+  .footer__link, .footer__link>a {
     font-size: 14px;
     line-height: 17px;
   }

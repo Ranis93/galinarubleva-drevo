@@ -146,7 +146,7 @@ import { mapMutations } from 'vuex'
 import { dragDropSlider } from '../assets/js/slider.js'
 export default {
   methods: {
-    ...mapMutations(['setCurrentPackage'])
+    ...mapMutations('service-packages', ['setCurrentPackage'])
   },
   mounted () {
     try {
