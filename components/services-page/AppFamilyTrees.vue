@@ -225,9 +225,11 @@ export default {
   components: { AppUseful },
   mounted () {
     // Вставка popup от Bitrix на кнопку
-    insertBitrix('.trees-decor__inner', '.trees-decor__btn')
-    insertBitrix('.trees-gift__left-side', '.trees-gift__btn')
-    insertBitrix('.trees-how__inner', '.trees-how__btn')
+    try {
+      insertBitrix('.trees-decor__inner', '.trees-decor__btn')
+      insertBitrix('.trees-gift__left-side', '.trees-gift__btn')
+      insertBitrix('.trees-how__inner', '.trees-how__btn')
+    } catch (error) {}
   }
 }
 </script>

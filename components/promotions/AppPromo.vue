@@ -225,8 +225,8 @@
                       Оформление и презентация исследовательской работы
                     </div>
                     <div class="cards__price">
-                      <div class="cards__oldprice">90 000 руб.</div>
-                      <span>69 300</span> руб. <span>по Башкирии</span>
+                      <div class="cards__oldprice">110 000 руб.</div>
+                      <span>90 000</span> руб. <span>по Башкирии</span>
                     </div>
                     <nuxt-link to="/our_services/packages">
                       <button
@@ -313,8 +313,12 @@ export default {
     } catch (error) {
       console.log(error)
     }
-    insertBitrix('.promotion-hat__about', '.promotion-hat__btn')
-    insertBitrix('.beginning__left-side', '.beginning_btn')
+    try {
+      insertBitrix('.promotion-hat__about', '.promotion-hat__btn')
+      insertBitrix('.beginning__left-side', '.beginning_btn')
+    } catch (error) {
+      console.log(error)
+    }
   },
   unmounted () {
     this.$store.commit('closeLinks')

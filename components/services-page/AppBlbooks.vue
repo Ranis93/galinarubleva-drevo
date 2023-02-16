@@ -226,8 +226,10 @@ export default {
       dndSliderWhithoutArrInd('.imgSlide2', '.imgSlideList', '.imgSlideCards', '.imgSlideImg', '.points', 2)
       dndSliderWhithoutArrInd('.imgSlide3', '.imgSlideList', '.imgSlideCards', '.imgSlideImg', '.points', 2)
     } catch (error) { console.log(error) }
-    insertBitrix('.blbooks-how__inner', '.blbooks-how__btn')
-    insertBitrix('.blbloks-request__left-side', '.blbloks-request__btn')
+    try {
+      insertBitrix('.blbooks-how__inner', '.blbooks-how__btn')
+      insertBitrix('.blbloks-request__left-side', '.blbloks-request__btn')
+    } catch (error) { console.log(error) }
 
     const cards = document.querySelectorAll('.blbooks-choose__card')
     cards.forEach((item) => {

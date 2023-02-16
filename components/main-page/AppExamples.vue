@@ -90,7 +90,9 @@ import { dragDropSlider } from '../../assets/js/slider.js'
 import { insertBitrix } from '../../assets/js/bitrix-window.js'
 export default {
   mounted () {
-    insertBitrix('.examples__inner', '.examples__btn')
+    try {
+      insertBitrix('.examples__inner', '.examples__btn')
+    } catch (error) {}
     try {
       new VideoPlayer('.slide-inner__play-circle', '.overlay').init()
       dragDropSlider(

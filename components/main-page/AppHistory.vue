@@ -27,7 +27,9 @@ import { insertBitrix } from '../../assets/js/bitrix-window.js'
 export default {
   mounted () {
     // Вставка popup от Bitrix на кнопку
-    insertBitrix('.history__left-side', '.history__btn')
+    try {
+      insertBitrix('.history__left-side', '.history__btn')
+    } catch (error) {}
   }
 }
 </script>

@@ -144,11 +144,15 @@ import AppUseful from '../AppUseful.vue'
 import { insertBitrix } from '../../assets/js/bitrix-window.js'
 export default {
   mounted () {
-    insertBitrix('.genresearch-how__inner', '.genresearch-how__btn')
-    insertBitrix(
-      '.genresearch-request__left-side',
-      '.genresearch-request__btn'
-    )
+    try {
+      insertBitrix('.genresearch-how__inner', '.genresearch-how__btn')
+      insertBitrix(
+        '.genresearch-request__left-side',
+        '.genresearch-request__btn'
+      )
+    } catch (error) {
+      console.log(error)
+    }
     try {
       new VideoPlayer('.genresearch-request__video', '.overlay').init()
     } catch (error) {

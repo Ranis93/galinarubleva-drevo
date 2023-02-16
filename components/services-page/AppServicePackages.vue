@@ -122,7 +122,9 @@ export default {
     ...mapMutations('service-packages', ['setCurrentPackage'])
   },
   mounted () {
-    insertBitrix('.packages', '.packages__btn')
+    try {
+      insertBitrix('.packages', '.packages__btn')
+    } catch (error) {}
   }
 }
 </script>

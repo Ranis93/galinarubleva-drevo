@@ -11,7 +11,7 @@
           </a>
         </div>
         <div class="policy__text text-three">
-          Политика конфиденциальности
+          <nuxt-link to="/policy">Политика конфиденциальности</nuxt-link>
         </div>
       </div>
     </div>
@@ -46,6 +46,7 @@ export default {
   letter-spacing: 0.025em;
   color: rgba(255, 255, 255, 0.8);
   display: inline-block;
+  text-decoration: none;
 }
 .policy__text > a {
   text-decoration: none;

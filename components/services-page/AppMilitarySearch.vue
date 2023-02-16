@@ -104,7 +104,9 @@ export default {
   components: { AppServices, AppUseful },
   mounted () {
     // Вставка popup от Bitrix на кнопку
-    insertBitrix('.militsearch-gift__left-side', '.militsearch-gift__btn')
+    try {
+      insertBitrix('.militsearch-gift__left-side', '.militsearch-gift__btn')
+    } catch (error) {}
   }
 }
 </script>
