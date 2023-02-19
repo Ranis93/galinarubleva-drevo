@@ -6,12 +6,7 @@
         <div class="contacts__inner">
           <div class="contacts__cards">
             <div class="contacts__card left-side">
-              <iframe
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A19148b91f3c6976e22c1adeaf117dede7461a3531a85fa879a4dc2be4b148938&amp;source=constructor"
-                width="478"
-                height="523"
-                frameborder="0"
-              />
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A83beb0ea878824298624fd4a3311b572104084f50d31457890d2ec47a99144d8&amp;source=constructor" width="478" height="523" frameborder="0" />
             </div>
             <div class="contacts__card right-side">
               <h1 class="contacts__title">
@@ -21,7 +16,7 @@
                 Общая информация
               </div>
               <div class="contacts__address">
-                ул. Верхнеторговая площадь, 4 Офис 315
+                ул. Достоевского, 100
               </div>
               <div class="contacts__phone">Тел.: +7 (347) 224-28-99</div>
               <div class="contacts__mail">E-mail: drevo@ufaritual.com</div>

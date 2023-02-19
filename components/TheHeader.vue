@@ -259,7 +259,7 @@
           <img src="../assets/img/footer_logo.png" alt="footer_logo" />
         </div>
         <div class="header__nav-txt">
-          г. Уфа,<br />Верхнеторговая площадь, 4<br />Офис 315
+          г. Уфа,<br />ул. Достоевского, 100<br />
         </div>
       </div>
     </div>    

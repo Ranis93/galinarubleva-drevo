@@ -23,8 +23,7 @@
             <div class="header__contacts-second">
               <div class="header__text">
                 г. Уфа, <br>
-                Верхнеторговая площадь, 4<br>
-                Офис 315
+                ул. Достоевского, 100<br>
               </div>
               <button class="header__button">
                 Заказать звонок
