@@ -65,6 +65,11 @@ import { mapGetters, mapState } from 'vuex'
 import { dragDropSliderWI } from '../../../assets/js/slider.js'
 
 export default {
+  data() {
+    return{
+      currentSlide: 0
+    }
+  },
   computed: {
     ...mapState('gallery', ['isZoomed']),
     ...mapGetters('gallery', [
@@ -95,8 +100,6 @@ export default {
   },
   mounted () {
     try {
-      const curSlide = this.getCurrentSlide
-      const zoomed = this.isZoomed
       dragDropSliderWI(
         '.slider-window',
         '.slider-list',
@@ -104,11 +107,9 @@ export default {
         '.slide',
         '.gallery__slider',
         this.getCurrentAlbum.photo.length,
-        curSlide,
-        zoomed
+        this.getCurrentSlide,
+        this
       )
-      this.$store.commit('gallery/setCurrentSlide', { Num: curSlide.Num })
-      this.$store.commit('gallery/setZoomState', { value: zoomed.value })
     } catch (error) {
       console.log('Slider is hidden')
     }
