@@ -16,16 +16,21 @@
                 Общая информация
               </div>
               <div class="contacts__address">
-                ул. Достоевского, 100
+                ул. Достоевского, 100, 1 этаж <br>
+                Вход сто сороны ул. Крупская
               </div>
-              <div class="contacts__phone">Тел.: +7 (347) 224-28-99</div>
-              <div class="contacts__mail">E-mail: drevo@ufaritual.com</div>
+              <div class="contacts__phone">
+                Тел.: +7 (347) 224-28-99
+              </div>
+              <div class="contacts__mail">
+                E-mail: drevo@ufaritual.com
+              </div>
               <div class="contacts__text edu">
                 Управляющая компания EduPartner
               </div>
               <a href="https://edu-partner.ru/" class="contacts__link">
                 <button class="contacts__btn">
-                  <img src="../assets/img/contacts_btn.png" alt="contacts_btn" />
+                  <img src="../assets/img/contacts_btn.png" alt="contacts_btn">
                 </button>
               </a>
             </div>

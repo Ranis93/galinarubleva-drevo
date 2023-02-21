@@ -3,7 +3,7 @@
     <div class="container">
       <div class="policy__inner">
         <div class="policy__text text-one">
-          © 2022 Все права защищены
+          © 2023 Все права защищены
         </div>
         <div class="policy__text text-two">
           <a href="https://edu-partner.ru/">

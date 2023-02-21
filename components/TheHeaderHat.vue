@@ -23,7 +23,8 @@
             <div class="header__contacts-second">
               <div class="header__text">
                 г. Уфа, <br>
-                ул. Достоевского, 100<br>
+                ул. Достоевского, 100, 1 этаж<br>
+                Вход сто сороны ул. Крупская
               </div>
               <button class="header__button">
                 Заказать звонок
