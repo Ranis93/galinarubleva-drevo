@@ -2,7 +2,7 @@ export const state = () => ({
   articles: [
     {
       id: '01',
-      src: 'http://galinarubleva-drevo.ru/files/img/articles/article-01.png',
+      src: 'https://galinarubleva-drevo.ru/files/img/articles/article-01.png',
       title: '5 причин начать изучать историю семьи',
       date: '21.06.2022',
       url: '',
@@ -10,7 +10,7 @@ export const state = () => ({
     },
     {
       id: '02',
-      src: 'http://galinarubleva-drevo.ru/files/img/articles/article-02.png',
+      src: 'https://galinarubleva-drevo.ru/files/img/articles/article-02.png',
       title: 'Самое большое в истории генеалогическое древо',
       date: '28.06.2022',
       url: '',
@@ -18,7 +18,7 @@ export const state = () => ({
     },
     {
       id: '03',
-      src: 'http://galinarubleva-drevo.ru/files/img/articles/article-03.png',
+      src: 'https://galinarubleva-drevo.ru/files/img/articles/article-03.png',
       title: 'Виды родословного древа',
       date: '07.07.2022',
       url: '',
@@ -26,7 +26,7 @@ export const state = () => ({
     },
     {
       id: '04',
-      src: 'http://galinarubleva-drevo.ru/files/img/articles/article-04.png',
+      src: 'https://galinarubleva-drevo.ru/files/img/articles/article-04.png',
       title: 'Почему не всегда получается найти самостоятельно',
       date: '14.07.2022',
       url: '',
@@ -34,7 +34,7 @@ export const state = () => ({
     },
     {
       id: '05',
-      src: 'http://galinarubleva-drevo.ru/files/img/articles/article-05.png',
+      src: 'https://galinarubleva-drevo.ru/files/img/articles/article-05.png',
       title: '8 особенностей, которые передаются нам генетически',
       date: '22.07.2022',
       url: '',
@@ -42,7 +42,7 @@ export const state = () => ({
     },
     {
       id: '06',
-      src: 'http://galinarubleva-drevo.ru/files/img/articles/article-06.png',
+      src: 'https://galinarubleva-drevo.ru/files/img/articles/article-06.png',
       title: 'Ревизские сказки',
       date: '29.07.2022',
       url: '',
@@ -50,7 +50,7 @@ export const state = () => ({
     },
     {
       id: '07',
-      src: 'http://galinarubleva-drevo.ru/files/img/articles/article-07.png',
+      src: 'https://galinarubleva-drevo.ru/files/img/articles/article-07.png',
       title: 'Шежере - это история своего рода',
       date: '10.08.2022',
       url: '',
@@ -58,7 +58,7 @@ export const state = () => ({
     },
     {
       id: '08',
-      src: 'http://galinarubleva-drevo.ru/files/img/articles/article-08.png',
+      src: 'https://galinarubleva-drevo.ru/files/img/articles/article-08.png',
       title: 'История клиента: что можно узнать о своих предках',
       date: '15.08.2022',
       url: '',
@@ -66,7 +66,7 @@ export const state = () => ({
     },
     {
       id: '09',
-      src: 'http://galinarubleva-drevo.ru/files/img/articles/article-09.png',
+      src: 'https://galinarubleva-drevo.ru/files/img/articles/article-09.png',
       title: '5 известных русских фамилий и их значения',
       date: '22.08.2022',
       url: '',
@@ -74,7 +74,7 @@ export const state = () => ({
     },
     {
       id: '10',
-      src: 'http://galinarubleva-drevo.ru/files/img/articles/article-10.png',
+      src: 'https://galinarubleva-drevo.ru/files/img/articles/article-10.png',
       title: 'Полезные ресурсы для поиска своих предков',
       date: '03.09.2022',
       url: '',
@@ -82,7 +82,7 @@ export const state = () => ({
     },
     {
       id: '11',
-      src: 'http://galinarubleva-drevo.ru/files/img/articles/article-11.png',
+      src: 'https://galinarubleva-drevo.ru/files/img/articles/article-11.png',
       title: 'Как узнать, кто ваш прадед',
       date: '16.10.2022',
       url: '',
@@ -90,7 +90,7 @@ export const state = () => ({
     },
     {
       id: '12',
-      src: 'http://galinarubleva-drevo.ru/files/img/articles/article-12.png',
+      src: 'https://galinarubleva-drevo.ru/files/img/articles/article-12.png',
       title: 'Кое-что интересное про однофамильцев',
       date: '20.11.2022',
       url: '',
@@ -101,7 +101,7 @@ export const state = () => ({
   shareOpened: false, // окно со ссылками соц сетей
   randomCards: [{
     id: '01',
-    src: 'http://galinarubleva-drevo.ru/files/img/articles/article-01.png',
+    src: 'https://galinarubleva-drevo.ru/files/img/articles/article-01.png',
     title: '5 причин начать изучать историю семьи',
     date: '21.06.2022',
     url: '',
@@ -109,7 +109,7 @@ export const state = () => ({
   },
   {
     id: '02',
-    src: 'http://galinarubleva-drevo.ru/files/img/articles/article-02.png',
+    src: 'https://galinarubleva-drevo.ru/files/img/articles/article-02.png',
     title: 'Самое большое в истории генеалогическое древо',
     date: '28.06.2022',
     url: '',

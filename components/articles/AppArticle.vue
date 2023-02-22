@@ -3,15 +3,15 @@
     <div class="container">
       <div class="news__inner">
         <h1 class="news__title">
-          {{ currentArticle.title }}
+          {{ getNews.title }}
         </h1>
         <div class="news__image">
-          <img :src="currentArticle.src" alt="news__image">
+          <img :src="getNews.src" alt="news__image">
         </div>
         <div
           class="news__desc"
           @click="$store.commit('artic/closeLinks')"
-          v-html="currentArticle.desc"
+          v-html="getNews.desc"
         />
       </div>
     </div>
@@ -24,39 +24,29 @@ import { mapGetters } from 'vuex'
 export default {
   head () {
     return {
-      title: `${this.currentArticle.title} | ГалинаРублеваДрево`,
+      title: `${this.getNews.title} | ГалинаРублеваДрево`,
       meta: [
         {
           hid: 'Новости',
           name: 'description',
-          content: `Статьи по генеалогии, родословному и семейному древу (дереву) - ${this.currentArticle.title} ⭐Бесплатная консультация. Звоните!☎ 8(347)244-28-99`
+          content: `Статьи по генеалогии, родословному и семейному древу (дереву) - ${this.getNews.title} ⭐Бесплатная консультация. Звоните!☎ 8(347)244-28-99`
         }
       ]
     }
   },
-  data() {
-    return {
-      currentArticle: {}
-    }
-  },
   computed: {
-    ...mapGetters('artic', ['getAllArticles'])    
-  },
-  methods: {
+    ...mapGetters('artic', ['getAllArticles']),
     getNews () {
-      const news = this.getAllArticles.find((article) => {
-        return article.url === this.$route.fullPath
-      }
+      const news = this.getAllArticles.find((article) =>
+        article.url.trim() == '/articles/' + this.$route.params.articleSrc.trim()
       )
-      this.currentArticle = news
+      this.$store.commit('artic/setCurrentArticle', { value: news.id})
       this.$store.commit('bredcrumbs/changeBredcrumbs', {
         values: ['Статьи', news.title],
         paths: ['/articles', news.url]
       })
+      return news
     }
-  },
-  beforeMount() {
-    this.getNews()
   },
   unmounted () {
     this.$store.commit('artic/closeLinks')

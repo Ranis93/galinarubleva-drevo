@@ -10,7 +10,7 @@
             v-for="(articleCard, index) in getAllArticles"
             :key="articleCard.id"
             :to="articleCard.url"
-            @click="$store.commit('setCurrentArticle', { value: index })"
+            @click="$store.commit('artic/setCurrentArticle', { value: index })"
             class="articles__card"
           >
             <div class="articles-card__img">
