@@ -63,7 +63,7 @@ import { mapGetters, mapMutations } from 'vuex'
 export default {
   data () {
     return {
-      myUrl: 'http://galinarubleva-drevo.ru' + this.$route.fullPath
+      myUrl: 'https://galinarubleva-drevo.ru' + this.$route.fullPath
     }
   },
   computed: mapGetters('artic', ['getShareBtnStatus']),
