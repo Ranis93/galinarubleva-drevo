@@ -1,5 +1,13 @@
 <template>
   <footer v-if="getFooterIsShow" class="footer">
+  <div class="callbtn"
+    v-if="callBtnIsShow">
+    <a href="tel:+73472242899">
+      <div class="callbtn__inner animated infinite pulse faster">
+        <img src="../assets/img/phone.svg" alt="phonebtn">
+      </div>
+    </a>
+  </div>
     <div class="container">
       <div class="footer__inner">
         <div class="footer__right">
@@ -172,13 +180,55 @@
 import { mapGetters } from 'vuex'
 
 export default {
+  data() {
+    return {
+      callBtnIsShow: false
+    }
+  },
+  methods: {
+    showCallBtn(){
+      setTimeout(() => {
+        this.callBtnIsShow = true
+      }, "10000")
+    }
+  },
   computed: {
     ...mapGetters('main', ['getFooterIsShow'])
+  },
+  mounted() {
+    this.showCallBtn()
   }
 }
 </script>
 
-<style scoped>
+<style>
+.callbtn{
+  position: fixed;
+  bottom: 100px;
+  right: 90px;
+
+  animation: ani 2.5s forwards;
+}
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.callbtn__inner{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, #673800 0%, rgba(103, 56, 0, 0.94) 100%);
+  box-shadow: 0px 0px 20px #7D4E24;
+}
+.callbtn img{
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .footer {
   background-color: #472906;
 }
@@ -269,6 +319,9 @@ export default {
   }
 }
 @media (max-width: 480px) {
+  .callbtn{
+    display: none;
+  }
   .footer__inner {
     padding: 20px 0 54px 0;
   }
