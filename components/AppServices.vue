@@ -6,7 +6,7 @@
           <div class="services__title">Пакеты услуг</div>
           <div class="services__desc">
             Вы можете стать Хранителем своего рода - человеком, который
-            объединит отрывочные сведения, найдёт своих предкови и передаст
+            объединит отрывочные сведения, найдёт своих предков и передаст
             будущему поколению многовековую историю вашего Рода.
           </div>
         </div>
@@ -28,7 +28,7 @@
                     Составление схемы родословной линии и пояснительной записке
                   </div>
                   <div class="cards__price">
-                    35 000 руб. <span>по Башкирии</span>
+                    {{parseInt(packages[0].price).toLocaleString("ru-RU")}} руб. <span>по Башкирии</span>
                   </div>
                   <nuxt-link to="/our_services/packages">
                     <button
@@ -39,7 +39,7 @@
                     </button>
                   </nuxt-link>
                   <div class="cards__price">
-                    135 000 руб. <span>по России</span>
+                    {{parseInt(packages[3].price).toLocaleString("ru-RU")}} руб. <span>по России</span>
                   </div>
                   <nuxt-link to="/our_services/packages">
                     <button
@@ -65,7 +65,7 @@
                     Дизайн и оформление исследовательской работы
                   </div>
                   <div class="cards__price">
-                    70 000 руб. <span>по Башкирии</span>
+                    {{parseInt(packages[1].price).toLocaleString("ru-RU")}} руб. <span>по Башкирии</span>
                   </div>
                   <nuxt-link to="/our_services/packages">
                     <button
@@ -76,7 +76,7 @@
                     </button>
                   </nuxt-link>
                   <div class="cards__price">
-                    165 000 руб. <span>по России</span>
+                    {{parseInt(packages[4].price).toLocaleString("ru-RU")}} руб. <span>по России</span>
                   </div>
                   <nuxt-link to="/our_services/packages">
                     <button
@@ -102,7 +102,7 @@
                     Оформление и презентация исследовательской работы
                   </div>
                   <div class="cards__price">
-                    90 000 руб. <span>по Башкирии</span>
+                    {{parseInt(packages[2].price).toLocaleString("ru-RU")}} руб. <span>по Башкирии</span>
                   </div>
                   <nuxt-link to="/our_services/packages">
                     <button
@@ -113,7 +113,7 @@
                     </button>
                   </nuxt-link>
                   <div class="cards__price">
-                    185 000 руб. <span>по России</span>
+                    {{parseInt(packages[5].price).toLocaleString("ru-RU")}} руб. <span>по России</span>
                   </div>
                   <nuxt-link to="/our_services/packages">
                     <button
@@ -142,9 +142,12 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapMutations, mapState } from 'vuex'
 import { dragDropSlider } from '../assets/js/slider.js'
 export default {
+  computed: {
+    ...mapState('service-packages', ['packages'])
+  },
   methods: {
     ...mapMutations('service-packages', ['setCurrentPackage'])
   },
