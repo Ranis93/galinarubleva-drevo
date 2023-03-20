@@ -42,7 +42,7 @@
           <div class="history-corp__info">
             <div class="history-corp__name">Рублева Галина</div>
             <div class="history-corp__position">
-              Владелица группы компаний «Уфаритуал.рф»
+              Собственник группы компаний
             </div>
           </div>
           <div class="history-corp__photo">

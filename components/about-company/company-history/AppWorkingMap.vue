@@ -2,7 +2,7 @@
   <section class="working-map">
     <div class="container">
       <div class="working-map__inner">
-        <div class="working-map__title">Работаем на территории 10 стран</div>
+        <div class="working-map__title">Основной регион поиска - Республика Башкортостан, так же все регионы России</div>
         <div class="working-map__text">Российская Федерация, страны СНГ</div>
         <div class="working-map__image">
           <img
@@ -50,6 +50,7 @@ export default {}
   font-size: 32px;
   line-height: 44px;
   color: #7d4e24;
+  max-width: 906px;
 }
 .working-map__text {
   padding: 25px 0 50px 0;

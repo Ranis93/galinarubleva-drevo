@@ -2,11 +2,33 @@
   <footer v-if="getFooterIsShow" class="footer">
   <div class="callbtn"
     v-if="callBtnIsShow">
-    <a href="tel:+73472242899">
-      <div class="callbtn__inner animated infinite pulse faster">
-        <img src="../assets/img/phone.svg" alt="phonebtn">
+      <div class="callbtn__inner">
+        <div class="callbtn__not-active animated infinite pulse faster"
+          v-if="!callBtnIsOpened"
+          @click="callBtnIsOpened=true"
+        >
+          <img src="../assets/img/call_btn/call_btn_phone.svg" alt="phonebtn">
+        </div>
+        <div class="callbtn__active"
+          v-else
+        >
+          <div class="callbtn__other">
+            <div class="callbtn__slide animated fadeInRight delay-3s">
+              <div class="callbtn__bid" @click="callBtnIsOpened=false">
+                <img src="../assets/img/call_btn/call_btn_letter.svg" alt="letterbtn">
+              </div>
+              <a href="tel:+73472242899" @click="callBtnIsOpened=false">
+                <img src="../assets/img/call_btn/call_btn_phone.svg" alt="phonebtn">
+              </a>
+            </div>
+          </div>
+          <div class="callbtn__close"
+            @click="callBtnIsOpened=false"
+          >
+            <img src="../assets/img/call_btn/call_btn_close.svg" alt="closebtn">
+          </div>
+        </div>
       </div>
-    </a>
   </div>
     <div class="container">
       <div class="footer__inner">
@@ -178,11 +200,13 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { insertBitrix2 } from '@/assets/js/bitrix-window.js'
 
 export default {
   data() {
     return {
-      callBtnIsShow: false
+      callBtnIsShow: false,
+      callBtnIsOpened: false
     }
   },
   methods: {
@@ -195,8 +219,14 @@ export default {
   computed: {
     ...mapGetters('main', ['getFooterIsShow'])
   },
-  mounted() {
+  mounted() {    
     this.showCallBtn()
+  },
+  updated() {
+    // Вставка popup от Bitrix на кнопку
+    try {
+      insertBitrix2('.callbtn__slide', '.callbtn__bid')
+    } catch (error) {}
   }
 }
 </script>
@@ -213,20 +243,24 @@ export default {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
-.callbtn__inner{
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: radial-gradient(50% 50% at 50% 50%, #673800 0%, rgba(103, 56, 0, 0.94) 100%);
-  box-shadow: 0px 0px 20px #7D4E24;
+.callbtn__inner, .callbtn__not-active{
+  height: 84px;
 }
-.callbtn img{
-  width: 31px;
-  height: 31px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.callbtn__active, .callbtn__slide{
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 15px;
+  height: 84px;
+}
+.callbtn__slide img{
+  width: 84px;
+}
+.callbtn__inner img:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.callbtn__other{
+  overflow: hidden;
 }
 
 .footer {
