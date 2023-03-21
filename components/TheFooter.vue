@@ -236,6 +236,7 @@ export default {
   position: fixed;
   bottom: 100px;
   right: 90px;
+  z-index: 2;
 
   animation: ani 2.5s forwards;
 }
