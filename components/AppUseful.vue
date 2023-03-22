@@ -7,9 +7,9 @@
           <nuxt-link to="/articles" class="useful__text">Статьи</nuxt-link>
         </div>
         <carousel
-          class="carousel"
+          class="useful-carousel"
           :autoplay="true"
-          :autoplayTimeout="3000"
+          :autoplayTimeout="3500"
           :autoplaySpeed="1500"
           :autoplayHoverPause="true"
           :loop="true"
@@ -21,7 +21,7 @@
           :stagePadding="30"
           :lazyLoad="true"
           :lazyLoadEager="3"
-          :responsive="{365:{margin:20},768:{items:3,center:true,stagePadding:0}}"
+          :responsive="{365:{margin:20},485:{items:2,stagePadding:0},769:{items:3,stagePadding:0}}"
         >
           <nuxt-link
             v-for="(usefulCard, idx) in this.usefulCards"            
