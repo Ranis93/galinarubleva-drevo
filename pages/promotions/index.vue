@@ -2,17 +2,19 @@
   <div>
     <TheBredcrumbs />
     <AppPromotions />
+    <AppUseful />
   </div>
 </template>
 
 <script>
 import TheBredcrumbs from '~/components/TheBredcrumbs.vue'
 import AppPromotions from '~/components/promotions/AppPromotions.vue'
+import AppUseful from '~/components/AppUseful.vue'
 
 export default {
   name: 'Promotions',
   components: {
-    TheBredcrumbs, AppPromotions
+    TheBredcrumbs, AppPromotions, AppUseful
   },
   head () {
     return {
