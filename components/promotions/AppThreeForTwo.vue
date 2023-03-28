@@ -1,10 +1,8 @@
 <template>
   <div>
     <section class="hat">
-      <div class="container">
-        <div class="hat__inner">
-          <h1 class="hat__title">3 исследования по цене 2</h1>
-        </div>
+      <div class="hat__inner">
+        <h1 class="hat__title">3 исследования по цене 2</h1>
       </div>
     </section>
     <section class="chance">
@@ -113,7 +111,7 @@ $ff1 : "Noto", serif;
       font-size: 80px;
       line-height: 109px;
       text-align: center;
-      padding: 10px 0;
+      padding: 10px 20px;
       color: #673800;
 
       background: linear-gradient(270deg, rgba(255, 255, 255, 0.136) 0%, rgba(255, 255, 255, 0.8) 20.11%, rgba(255, 255, 255, 0.8) 48.42%, rgba(255, 255, 255, 0.8) 77.3%, rgba(255, 255, 255, 0.136) 99.27%);
@@ -426,7 +424,7 @@ $ff1 : "Noto", serif;
       .hat__title{
         font-size: 30px;
         line-height: 41px;
-        padding: 13px 0;
+        padding: 13px 30px;
       }
     }
   }
@@ -514,7 +512,7 @@ $ff1 : "Noto", serif;
       .hat__title{
         font-size: 20px;
         line-height: 27px;
-        padding: 21px 0;
+        padding: 21px 20px;
       }
     }
   }
