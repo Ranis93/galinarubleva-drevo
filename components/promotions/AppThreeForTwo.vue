@@ -1,8 +1,10 @@
 <template>
   <div>
     <section class="hat">
-      <div class="hat__inner">
-        <h1 class="hat__title">3 исследования по цене 2</h1>
+      <div class="container">
+        <div class="hat__inner">
+          <h1 class="hat__title">3 исследования по цене 2</h1>
+        </div>
       </div>
     </section>
     <section class="chance">
