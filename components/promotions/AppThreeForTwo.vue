@@ -68,6 +68,7 @@
 
 <script>
 import { mapMutations } from 'vuex'
+import { insertBitrix } from '~/assets/js/bitrix-window'
 export default {
   methods: {
     ...mapMutations('service-packages', ['setCurrentPackage'])
