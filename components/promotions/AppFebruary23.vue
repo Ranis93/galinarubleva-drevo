@@ -1,39 +1,39 @@
 <template>
   <div>
-    <section class="promotion-hat">
+    <section class="feb-hat">
       <div class="container">
-        <div class="promotion-hat__inner">
-          <div class="promotion-hat__about">
-            <h1 class="promotion-hat__title">Акция на 23 февраля</h1>
-            <div class="promotion-hat__text">День защитника Отечества</div>
-            <div class="promotion-hat__desc">
+        <div class="feb-hat__inner">
+          <div class="feb-hat__about">
+            <h1 class="feb-hat__title">Акция на 23 февраля</h1>
+            <div class="feb-hat__text">День защитника Отечества</div>
+            <div class="feb-hat__desc">
               Мы хотим поздравить всех с одним из самых важных праздников —
               <strong>23 Февраля</strong> — и подарить скидку до
               <strong>23 %</strong> на услуги военного поиска и восстановление
               родословной в нашем центре в период
               <span>с 16 по 28 февраля 2023 года</span>
             </div>
-            <button class="promotion-hat__btn">Узнать своих предков</button>
+            <button class="feb-hat__btn">Узнать своих предков</button>
           </div>
-          <div class="promotion-hat__img">
+          <div class="feb-hat__img">
             <img src="../../assets/img/promotions/soldier.png" alt="soldier" />
           </div>
         </div>
       </div>
     </section>
-    <section class="promotion-body">
+    <section class="feb-body">
       <div class="container">
-        <div class="promotion-body__inner">
-          <div class="promotion-body__title">
+        <div class="feb-body__inner">
+          <div class="feb-body__title">
             Узнайте о Защитниках Отечества из вашего Рода
           </div>
-          <div class="promotion-body__text">
+          <div class="feb-body__text">
             О том, каким образом каждый из нас может найти реальные документы и
             по ним отследить путь своих предков во время Великой Отечественной
             войны, расскажет руководитель Центра семейной родословной Галина
             Рублева
           </div>
-          <div class="promotion-body__desc">
+          <div class="feb-body__desc">
             <strong
               >— Галина, здравствуйте! Расскажите, как именно происходит
               восстановление родословных и поиск военного пути?</strong
@@ -84,31 +84,31 @@
         </div>
       </div>
     </section>
-    <section class="promotion-sale">
+    <section class="feb-sale">
       <div class="container">
-        <div class="promotion-sale__inner">
-          <div class="promotion-sale__title">Поиск участников ВОВ</div>
-          <div class="promotion-sale__card">
-            <div class="promotion-sale__img">
+        <div class="feb-sale__inner">
+          <div class="feb-sale__title">Поиск участников ВОВ</div>
+          <div class="feb-sale__card">
+            <div class="feb-sale__img">
               <img
                 src="../../assets/img/promotions/promotion-sale-1.png"
-                alt="promotion-sale"
+                alt="feb-sale"
               />
             </div>
-            <div class="promotion-sale__desc">
-              <div class="promotion-sale__text">
+            <div class="feb-sale__desc">
+              <div class="feb-sale__text">
                 Военный поиск — это возможность восстановить боевой путь!
                 Проследить в каких боях участвовал Ваш предок, где это
                 происходило, какие звания и награды были присвоены в ходе
                 военных событий!
               </div>
-              <div class="promotion-sale__prices">
-                <div class="promotion-sale__newprice">5 400 ₽</div>
-                <div class="promotion-sale__oldprice">7 000 ₽</div>
-                <div class="promotion-sale__star">
+              <div class="feb-sale__prices">
+                <div class="feb-sale__newprice">5 400 ₽</div>
+                <div class="feb-sale__oldprice">7 000 ₽</div>
+                <div class="feb-sale__star">
                   <img
                     src="../../assets/img/promotions/promotion-sale-star-1.png"
-                    alt="promotion-star"
+                    alt="feb-star"
                   />
                 </div>
               </div>
@@ -314,33 +314,30 @@ export default {
       console.log(error)
     }
     try {
-      insertBitrix('.promotion-hat__about', '.promotion-hat__btn')
+      insertBitrix('.feb-hat__about', '.feb-hat__btn')
       insertBitrix('.beginning__left-side', '.beginning_btn')
     } catch (error) {
       console.log(error)
     }
-  },
-  unmounted () {
-    this.$store.commit('closeLinks')
   }
 }
 </script>
 
 <style scoped>
-.promotion-hat {
+.feb-hat {
   margin-top: -75px;
   background-color: #283e24;
   position: relative;
   z-index: 0;
 }
-.promotion-hat__inner {
+.feb-hat__inner {
   display: flex;
   justify-content: space-between;
 }
-.promotion-hat__about {
+.feb-hat__about {
   padding-bottom: 101px;
 }
-.promotion-hat__img {
+.feb-hat__img {
   background-image: url("../../assets/img/promotions/promotion-1_bg.png");
   background-repeat: no-repeat;
   background-position: center right;
@@ -353,14 +350,14 @@ export default {
   height: 100%;
   z-index: -1;
 }
-.promotion-hat__img > img {
+.feb-hat__img > img {
   width: 332px;
   height: 535px;
   transform: translate(91%, 0);
   position: inherit;
   bottom: 0;
 }
-.promotion-hat__title {
+.feb-hat__title {
   font-family: "Noto", serif;
   font-weight: 700;
   font-size: 64px;
@@ -371,7 +368,7 @@ export default {
   margin-bottom: 25px;
   padding-top: 91px;
 }
-.promotion-hat__text {
+.feb-hat__text {
   font-family: "Noto", serif;
   font-weight: 700;
   font-size: 32px;
@@ -380,7 +377,7 @@ export default {
 
   margin-bottom: 37px;
 }
-.promotion-hat__desc {
+.feb-hat__desc {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -389,11 +386,11 @@ export default {
   max-width: 467px;
   margin-bottom: 50px;
 }
-.promotion-hat__desc > span {
+.feb-hat__desc > span {
   font-weight: 700;
   color: rgba(184, 170, 123, 1);
 }
-.promotion-hat__btn {
+.feb-hat__btn {
   font-family: "Noto", serif;
   font-weight: 700;
   font-size: 20px;
@@ -408,19 +405,19 @@ export default {
   border-radius: 50px;
   padding: 15px 20px;
 }
-.promotion-hat__btn:hover {
+.feb-hat__btn:hover {
   cursor: pointer;
   color: #007632;
   background: #ffffff;
   border: 1px solid #007632;
 }
-.promotion-body {
+.feb-body {
   background: #e3e3e3;
 }
-.promotion-body__inner {
+.feb-body__inner {
   padding: 100px 0;
 }
-.promotion-body__title {
+.feb-body__title {
   font-family: "Noto", serif;
   font-weight: 700;
   font-size: 40px;
@@ -430,7 +427,7 @@ export default {
   max-width: 670px;
   padding-bottom: 30px;
 }
-.promotion-body__text {
+.feb-body__text {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
@@ -439,19 +436,19 @@ export default {
   max-width: 880px;
   padding-bottom: 58px;
 }
-.promotion-body__desc {
+.feb-body__desc {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   color: #1d1d1d;
 }
-.promotion-sale {
+.feb-sale {
   background: #1d1d1d;
 }
-.promotion-sale__inner {
+.feb-sale__inner {
   padding: 100px 0;
 }
-.promotion-sale__title {
+.feb-sale__title {
   font-family: "Noto", serif;
   font-style: normal;
   font-weight: 700;
@@ -460,24 +457,24 @@ export default {
   color: #ffffff;
   padding-bottom: 50px;
 }
-.promotion-sale__card {
+.feb-sale__card {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   column-gap: 20px;
 }
-.promotion-sale__img {
+.feb-sale__img {
   max-width: 580px;
   height: auto;
   border-radius: 30px;
 }
-.promotion-sale__img > img {
+.feb-sale__img > img {
   border-radius: 30px;
 }
-.promotion-sale__desc {
+.feb-sale__desc {
   width: 480px;
 }
-.promotion-sale__text {
+.feb-sale__text {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -485,10 +482,10 @@ export default {
 
   padding-bottom: 32px;
 }
-.promotion-sale__prices {
+.feb-sale__prices {
   display: flex;
 }
-.promotion-sale__newprice {
+.feb-sale__newprice {
   font-family: "Noto", serif;
   font-weight: 700;
   font-size: 36px;
@@ -497,7 +494,7 @@ export default {
 
   padding-top: 26px;
 }
-.promotion-sale__oldprice {
+.feb-sale__oldprice {
   font-family: "Noto", serif;
   font-weight: 400;
   font-size: 24px;
@@ -505,7 +502,7 @@ export default {
   text-decoration: line-through;
   color: rgba(228, 228, 228, 0.8);
 }
-.promotion-sale__star {
+.feb-sale__star {
   width: 78px;
   height: 78px;
 
@@ -778,24 +775,24 @@ export default {
   background: #007632;
 }
 @media (max-width: 1024px) {
-  .promotion-hat__img {
+  .feb-hat__img {
     background-position: 60% 100%;
     background-size: auto 100%;
   }
-  .promotion-hat__img > img {
+  .feb-hat__img > img {
     transform: translate(207%, 0);
   }
-  .promotion-body__text {
+  .feb-body__text {
     padding-bottom: 50px;
   }
-  .promotion-sale__img {
+  .feb-sale__img {
     max-width: 470px;
   }
-  .promotion-sale__text {
+  .feb-sale__text {
     padding-bottom: 15px;
     max-width: 470px;
   }
-  .promotion-sale__star {
+  .feb-sale__star {
     padding-top: 31px;
   }
   .PServices__inner {
@@ -819,44 +816,44 @@ export default {
   }
 }
 @media (max-width: 768px) {
-  .promotion-hat__about {
+  .feb-hat__about {
     padding-bottom: 65px;
   }
-  .promotion-hat__img {
+  .feb-hat__img {
     background-position: 42% 100%;
     background-size: 145% 100%;
   }
-  .promotion-hat__img > img {
+  .feb-hat__img > img {
     transform: translate(255%, 0);
     width: 288px;
     height: 463px;
   }
-  .promotion-hat__title {
+  .feb-hat__title {
     font-size: 55px;
     line-height: 40px;
     margin-bottom: 15px;
   }
-  .promotion-hat__text {
+  .feb-hat__text {
     font-size: 24px;
     line-height: 40px;
     margin-bottom: 20px;
   }
-  .promotion-hat__desc {
+  .feb-hat__desc {
     max-width: 354px;
     margin-bottom: 40px;
   }
-  .promotion-body__inner,
-  .promotion-sale__inner {
+  .feb-body__inner,
+  .feb-sale__inner {
     padding: 80px 0;
   }
-  .promotion-sale__img {
+  .feb-sale__img {
     max-width: 354px;
     height: 204px;
   }
-  .promotion-sale__img > img {
+  .feb-sale__img > img {
     object-fit: cover;
   }
-  .promotion-sale__text {
+  .feb-sale__text {
     line-height: 23px;
   }
   .PServices__desc {
@@ -881,62 +878,62 @@ export default {
   }
 }
 @media (max-width: 480px) {
-  .promotion-hat > .container {
+  .feb-hat > .container {
     padding: 0;
   }
-  .promotion-hat__inner {
+  .feb-hat__inner {
     flex-wrap: wrap;
   }
-  .promotion-hat__about {
+  .feb-hat__about {
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
   }
-  .promotion-hat__img {
+  .feb-hat__img {
     position: static;
     background-position: 77% 50%;
     background-size: auto;
     width: 100%;
   }
-  .promotion-hat__img > img {
+  .feb-hat__img > img {
     transform: translate(10%, 0.5%);
     width: 317px;
     height: 512px;
   }
-  .promotion-hat__title {
+  .feb-hat__title {
     font-size: 43px;
     margin-bottom: 0;
   }
-  .promotion-hat__text {
+  .feb-hat__text {
     font-size: 19px;
   }
-  .promotion-hat__desc {
+  .feb-hat__desc {
     font-size: 18px;
     margin-bottom: 80px;
   }
-  .promotion-body__inner,
-  .promotion-sale__inner {
+  .feb-body__inner,
+  .feb-sale__inner {
     padding: 60px 0;
   }
-  .promotion-body__title {
+  .feb-body__title {
     font-size: 32px;
     line-height: 35px;
   }
-  .promotion-sale__title {
+  .feb-sale__title {
     font-size: 32px;
     line-height: 40px;
     padding-bottom: 30px;
   }
-  .promotion-sale__card {
+  .feb-sale__card {
     flex-wrap: wrap;
     column-gap: normal;
     row-gap: 30px;
   }
-  .promotion-sale__text {
+  .feb-sale__text {
     max-width: 100%;
     padding-bottom: 30px;
   }
-  .promotion-sale__star {
+  .feb-sale__star {
     padding-top: 25px;
   }
   .PServices__inner {
@@ -987,40 +984,40 @@ export default {
   }
 }
 @media (max-width: 360px) {
-  .promotion-hat__img {
+  .feb-hat__img {
     background-position: 77% 50%;
   }
-  .promotion-hat__img > img {
+  .feb-hat__img > img {
     transform: translate(18%, 0.5%);
     width: 257px;
     height: 416px;
   }
-  .promotion-hat__desc {
+  .feb-hat__desc {
     margin-bottom: 40px;
   }
-  .promotion-hat__btn {
+  .feb-hat__btn {
     font-size: 18px;
     line-height: 25px;
     padding: 10px 32px;
   }
-  .promotion-body__title {
+  .feb-body__title {
     font-size: 24px;
     line-height: 26px;
   }
-  .promotion-body__text {
+  .feb-body__text {
     font-size: 18px;
     line-height: 24px;
   }
-  .promotion-body__desc {
+  .feb-body__desc {
     font-size: 18px;
   }
-  .promotion-sale__title {
+  .feb-sale__title {
     font-size: 24px;
   }
-  .promotion-sale__img {
+  .feb-sale__img {
     height: 150px;
   }
-  .promotion-sale__text {
+  .feb-sale__text {
     font-size: 18px;
   }
   .PServices__inner {

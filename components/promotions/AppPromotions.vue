@@ -19,7 +19,7 @@
           v-if="activeType == 1"
           class="promotions__cards"
         >
-          <nuxt-link to="/promotions/23-february" class="promotions__card">
+          <nuxt-link to="/promotions/3-for-price-of-2" class="promotions__card">
             <div class="card__img">
               <img
                 loading="lazy"
@@ -180,11 +180,9 @@ export default {
   .promotions__inner {
     padding-bottom: 178px;
   }
-  .promotions__title {
-    margin-bottom: 25px;
-  }
   .promotions__types{
     margin-bottom: 35px;
+    column-gap: 132px;
   }
   .promotions__cards {
     .promotions__card {
@@ -202,41 +200,63 @@ export default {
   }
 }
 @media (max-width: 768px) {
-  .promotions__title {
-    margin-bottom: 35px;
+  .promotions__types{
+    column-gap: 48px;
   }
-  .promotions__card {
-    max-width: 229px;
-  }
-  .card__img,
-  .card__img > img {
-    width: 100%;
-  }
+  .promotions__cards {
+    .promotions__card {
+      max-width: 229px;
+    }
+    .card__img,
+    .card__img > img {
+      width: 100%;
+    }
+  }  
 }
 @media (max-width: 480px) {
+  .promotions__types{
+    column-gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    .promotions__type{
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
   .promotions__cards {
     flex-wrap: nowrap;
     column-gap: normal;
     justify-content: space-between;
-  }
-  .promotions__card {
-    max-width: none;
-    width: 48%;
-  }
-  .card__desc {
-    font-size: 16px;
-  }
+    .promotions__card {
+      max-width: none;
+      width: 48%;
+    }
+    .card__desc {
+      font-size: 16px;
+    }
+  }  
 }
 @media (max-width: 360px) {
-  .card__title {
-    margin: 15px 0 10px 0;
-    font-size: 14px;
-    line-height: 19px;
+  .promotions__title{
+    margin-bottom: 0;
   }
-  .card__img,
-  .card__img > img {
-    height: 90px;
-    border-radius: 15px;
+  .promotions__types{
+    margin-bottom: 17px;
+    .promotions__type{
+      font-size: 13px;
+      line-height: 18px;
+    }
   }
+  .promotions__cards {
+    .card__title {
+      margin: 15px 0 10px 0;
+      font-size: 14px;
+      line-height: 19px;
+    }
+    .card__img, .card__img > img {
+      height: 90px;
+      border-radius: 15px;
+    }
+  }  
 }
 </style>
