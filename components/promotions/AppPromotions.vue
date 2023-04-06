@@ -57,7 +57,7 @@
               <strong>23 Февраля</strong>
             </div>
           </nuxt-link>
-          <a href="#!" class="promotions__card">
+          <nuxt-link to="/promotions/help" class="promotions__card">
             <div class="card__img">
               <img
                 loading="lazy"
@@ -73,7 +73,7 @@
               Значение и происхождение фамилии может помочь вам больше узнать об
               истории собственной семьи
             </div>
-          </a>
+          </nuxt-link>
         </div>
       </div>
     </div>
