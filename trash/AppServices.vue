@@ -148,9 +148,6 @@ export default {
   computed: {
     ...mapState('service-packages', ['packages'])
   },
-  methods: {
-    ...mapMutations('service-packages', ['setCurrentPackage'])
-  },
   mounted () {
     try {
       dragDropSlider(
@@ -161,9 +158,10 @@ export default {
         '.services__arrows',
         3
       )
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
+  },
+  methods: {
+    ...mapMutations('service-packages', ['setCurrentPackage'])
   }
 }
 </script>

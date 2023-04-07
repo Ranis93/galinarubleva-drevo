@@ -358,11 +358,219 @@ export default {
 }
 @media (max-width: 768px) {
   .Hmain{
-    .Hmain__inner{}
+    .Hmain__inner{
+      padding-top: 95px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      .Hmain__img{
+        align-self: flex-end;
+      }
+    }
+  }
+  .Hwhy{
+    .Hwhy__inner{
+      .Hwhy__card{
+        .Hwhy__col{
+          .Hwhy__desc{
+            &:last-child{
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .Hpresent{
+    .Hpresent__inner{
+      .Hpresent__window{
+        column-gap: 10px;
+        .Hpresent__about{
+          max-width: 337px;
+        }
+        .Hpresent__img{
+          max-width: 354px;
+        }
+      }
+    }
   }
 }
 @media (max-width: 480px) {
+  .Hmain{
+    .Hmain__inner{
+      padding-top: 72px;
+      row-gap: 35px;
+      .Hmain__about{
+        margin-top: 0;
+        .Hmain__title{
+          font-size: 32px;
+          line-height: 44px;
+        }
+        .Hmain__desc{
+          padding-bottom: 20px;
+        }
+        .Hmain__btn{
+          font-size: 16px;
+          line-height: 22px;
+          padding: 7.5px 22.5px;
+        }
+      }
+      .Hmain__img{
+        align-self: flex-start;
+        max-width: 379px;
+      }
+    }
+  }
+  .Hwhy{
+    .Hwhy__inner{
+      .Hwhy__title{
+        font-size: 26px;
+        line-height: 35px;
+      }
+      .Hwhy__card{
+        flex-wrap: wrap;
+        row-gap: 30px;
+        .Hwhy__img{
+          width: 100%;
+        }
+        .Hwhy__col{
+          width: 100%;
+          .Hwhy__desc{
+            font-size: 18px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+  .Hpresent{
+    .Hpresent__inner{
+      .Hpresent__window{
+        padding: 30px 23px;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        column-gap: normal;
+        row-gap: 30px;
+        position: relative;
+        .Hpresent__about{
+          width: 100%;
+          .Hpresent__title{
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 26px;
+            line-height: 35px;
+            padding: 30px 23px 0 23px;
+          }
+          .Hpresent__desc{
+            font-size: 18px;
+            line-height: 22px;
+            padding-bottom: 22px;
+          }
+          .Hpresent__list{
+            font-size: 16px;
+            line-height: 19px;
+          }
+          .Hpresent__prices{
+            margin-top: 8px;
+            .Hpresent__new-price{
+              font-size: 24px;
+              line-height: 33px;
+              padding-top: 17px;
+              padding-right: 6px;
+            }
+            .Hpresent__old-price{
+              font-size: 16px;
+              line-height: 22px;
+            }
+          }
+          .Hpresent__btn{
+            font-size: 18px;
+            line-height: 25px;
+            padding: 6px 26px;
+          }
+        }
+        .Hpresent__img{
+          margin-top: 100px;
+          max-width: none;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 360px) {
+  .Hmain{
+    .Hmain__inner{
+      .Hmain__about{
+        .Hmain__title{
+          font-size: 24px;
+          line-height: 33px;
+        }
+        .Hmain__desc{
+          font-size: 18px;
+          line-height: 22px;
+          padding-bottom: 40px;
+        }
+        .Hmain__btn{
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+      .Hmain__img{
+        max-width: 100%;
+      }
+    }
+  }
+  .Hwhy{
+    .Hwhy__inner{
+      .Hwhy__title{
+        font-size: 24px;
+        line-height: 29px;
+      }
+      .Hwhy__card{
+        .Hwhy__img{
+          border-radius: 30px;
+          img{
+            border-radius: 30px;
+          }
+        }
+        .Hwhy__col{
+          .Hwhy__desc{
+            font-size: 16px;
+            line-height: 19px;
+          }
+        }
+      }
+    }
+  }
+  .Hpresent{
+    .Hpresent__inner{
+      .Hpresent__window{
+        padding: 30px 20px;
+        row-gap: 20px;
+        .Hpresent__about{
+          .Hpresent__title{
+            padding: 30px 20px 0 20px;
+            font-size: 24px;
+            line-height: 29px;
+          }
+          .Hpresent__desc{
+            padding-bottom: 15px;
+          }
+          .Hpresent__prices{
+            margin-top: 0;
+          }
+          .Hpresent__btn{
+            font-size: 16px;
+            line-height: 22px;
+            padding: 7.5px 25px;
+          }
+        }
+        .Hpresent__img{
+          margin-top: 80px;
+        }
+      }
+    }
+  }
 }
 </style>

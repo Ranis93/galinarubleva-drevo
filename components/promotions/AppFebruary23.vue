@@ -310,15 +310,11 @@ export default {
         '.PServices__arrows',
         3
       )
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
     try {
       insertBitrix('.feb-hat__about', '.feb-hat__btn')
       insertBitrix('.beginning__left-side', '.beginning_btn')
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   }
 }
 </script>

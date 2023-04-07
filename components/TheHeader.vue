@@ -116,7 +116,7 @@
     </nav>
     <div
       class="header__burger-menu"
-      :class="{ header__nav_active: !burgerHide }"
+      :class="{ header__nav_active: burgerHide === false }"
     >
       <ul class="header__burger-list">
         <li class="header__burger-item">
@@ -132,38 +132,38 @@
               link_show: burgerMenuIsHide == false && activeBurgerList == 1,
             }"
           >
-            <li class="burger-link__li">
+            <li class="burger-link__li"
+              @click="burgerMenuHide">
               <nuxt-link exact
               to="/our_services/family_trees"
-              @click="burgerMenuHide"
                 >Родословные древа</nuxt-link
               >
             </li>
-            <li class="burger-link__li">
+            <li class="burger-link__li"
+              @click="burgerMenuHide">
               <nuxt-link exact
               to="/our_services/books"
-              @click="burgerMenuHide"
                 >Родословные книги</nuxt-link
               >
             </li>
-            <li class="burger-link__li">
+            <li class="burger-link__li"
+                @click="burgerMenuHide">
               <nuxt-link exact
                 to="/our_services/genealogical_research"
-                @click="burgerMenuHide"
                 >Генеалогическое исследование</nuxt-link
               >
             </li>
-            <li class="burger-link__li">
+            <li class="burger-link__li"
+                @click="burgerMenuHide">
               <nuxt-link exact
                 to="/our_services/military_search"
-                @click="burgerMenuHide"
                 >Военный поиск</nuxt-link
               >
             </li>
-            <li class="burger-link__li">
+            <li class="burger-link__li"
+              @click="burgerMenuHide">
               <nuxt-link exact
               to="/our_services/packages"
-              @click="burgerMenuHide"
                 >Пакеты услуг</nuxt-link
               >
             </li>
@@ -182,38 +182,39 @@
               link_show: burgerMenuIsHide == false && activeBurgerList == 2,
             }"
           >
-            <li class="burger-link__li">
+            <li class="burger-link__li"
+                @click="burgerMenuHide">
               <nuxt-link exact
                 to="/about_company/company_history"
-                @click="burgerMenuHide"
                 >История компании</nuxt-link
               >
             </li>
-            <li class="burger-link__li">
+            <li class="burger-link__li"
+              @click="burgerMenuHide">
               <nuxt-link exact
               to="/about_company/progress"
-              @click="burgerMenuHide"
                 >Наши достижения</nuxt-link
               >
             </li>
-            <li class="burger-link__li">
+            <li class="burger-link__li"
+              @click="burgerMenuHide">
               <nuxt-link exact
                 to="/about_company/photo_gallery"
-                @click="burgerMenuHide"
                 >Фотогалерея</nuxt-link
               >
             </li>
-            <li class="burger-link__li">
+            <li class="burger-link__li"
+              @click="burgerMenuHide">
               <nuxt-link exact
               to="/about_company/command"
-              @click="burgerMenuHide"
                 >Команда</nuxt-link
               >
             </li>
-            <li class="burger-link__li">
+            <li class="burger-link__li"
+              @click="burgerMenuHide"
+            >
               <nuxt-link exact
               to="/about_company/vacancies"
-              @click="burgerMenuHide"
                 >Вакансии</nuxt-link
               >
             </li>
@@ -224,7 +225,6 @@
           <nuxt-link exact
             to="/articles"
             class="header__burger-link"
-            @click="burgerListHide"
             >Статьи</nuxt-link
           >
         </li>
@@ -232,7 +232,6 @@
           <nuxt-link exact
             to="/contacts"
             class="header__burger-link"
-            @click="burgerListHide"
             >Контакты</nuxt-link
           >
         </li>
@@ -240,7 +239,6 @@
           <nuxt-link exact
             to="/reviews"
             class="header__burger-link"
-            @click="burgerListHide"
             >Отзывы</nuxt-link
           >
         </li>
@@ -248,7 +246,6 @@
           <nuxt-link exact
             to="/promotions"
             class="header__burger-link"
-            @click="burgerListHide"
             >Акции</nuxt-link
           >
         </li>
@@ -305,10 +302,14 @@ export default {
     },
     burgerMenuHide () {
       this.burgerHide = true
+      this.activeBurgerList = 0
+      this.burgerMenuIsHide = true
     }
   },
   mounted () { // Вставка popup от Bitrix на кнопку
-    insertBitrix('.header__contacts-second', '.header__button')
+    try {
+      insertBitrix('.header__contacts-second', '.header__button')
+    } catch (error) {}
   }
 }
 </script>

@@ -72,7 +72,6 @@ export default {
         3
       )
     } catch (error) {
-      console.log('error')
     }
   }
 }

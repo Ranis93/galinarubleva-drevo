@@ -151,12 +151,10 @@ export default {
         '.genresearch-request__btn'
       )
     } catch (error) {
-      console.log(error)
     }
     try {
       new VideoPlayer('.genresearch-request__video', '.overlay').init()
     } catch (error) {
-      console.log('error')
     }
   },
   components: { AppServices, AppUseful }

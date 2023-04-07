@@ -103,9 +103,7 @@ export default {
         '.examples__slider',
         4
       )
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   }
 }
 </script>

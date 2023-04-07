@@ -135,9 +135,7 @@ export default {
         '.reviews__arrows',
         4
       )
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   }
 }
 </script>
