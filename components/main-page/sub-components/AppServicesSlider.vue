@@ -34,17 +34,6 @@
           Подробнее
         </button>
       </nuxt-link>
-      <div class="cards__price">
-        {{parseInt(packages[3].price).toLocaleString("ru-RU")}} руб. <span>по России</span>
-      </div>
-      <nuxt-link to="/our_services/packages">
-        <button
-          class="cards__btn"
-          @click="setCurrentPackage({ value: 3 })"
-        >
-          Подробнее
-        </button>
-      </nuxt-link>
     </div>
     <div class="services__slide std">
       <div class="cards__title">Стандарт</div>

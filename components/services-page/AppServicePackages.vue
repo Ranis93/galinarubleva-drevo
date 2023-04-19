@@ -30,13 +30,6 @@
         <div class="nav__btns">
           <button
             class="nav__btn first"
-            :class="{ active: getCurrentPackageNum == 3 }"
-            @click="setCurrentPackage({ value: 3 })"
-          >
-            Эконом
-          </button>
-          <button
-            class="nav__btn"
             :class="{ active: getCurrentPackageNum == 4 }"
             @click="setCurrentPackage({ value: 4 })"
           >
