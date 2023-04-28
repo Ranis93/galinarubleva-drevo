@@ -108,7 +108,7 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
-import { insertBitrix } from '../../assets/js/bitrix-window.js'
+import { insertBitrix4 } from '../../assets/js/bitrix-window.js'
 export default {
   computed: mapGetters('service-packages', ['getCurrentPackage', 'getCurrentPackageNum']),
   methods: {
@@ -116,7 +116,7 @@ export default {
   },
   mounted () {
     try {
-      insertBitrix('.packages', '.packages__btn')
+      insertBitrix4('.packages', '.packages__btn')
     } catch (error) {}
   }
 }

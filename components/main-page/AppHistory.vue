@@ -23,12 +23,12 @@
 </template>
 
 <script>
-import { insertBitrix } from '../../assets/js/bitrix-window.js'
+import { insertBitrix3 } from '../../assets/js/bitrix-window.js'
 export default {
   mounted () {
     // Вставка popup от Bitrix на кнопку
     try {
-      insertBitrix('.history__left-side', '.history__btn')
+      insertBitrix3('.history__left-side', '.history__btn')
     } catch (error) {}
   }
 }
